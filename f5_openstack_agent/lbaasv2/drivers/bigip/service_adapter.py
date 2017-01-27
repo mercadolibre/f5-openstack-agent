@@ -63,8 +63,8 @@ class ServiceModelAdapter(object):
         return (network_id in self.conf.common_network_ids)
 
     def init_pool_name(self, loadbalancer, pool):
-        name = self.prefix + pool["id"]
-
+        #name = self.prefix + pool["id"]
+        name = pool["id"]
         return {"name": name,
                 "partition": self.get_folder_name(loadbalancer['tenant_id'])}
 
@@ -425,6 +425,7 @@ class ServiceModelAdapter(object):
             member['name'] = ip_address + '.' + str(port)
         else:
             member['name'] = ip_address + ':' + str(port)
+        member['description'] = lbaas_member["id"]
         member["partition"] = self.get_folder_name(loadbalancer["tenant_id"])
         member["address"] = ip_address
         return member

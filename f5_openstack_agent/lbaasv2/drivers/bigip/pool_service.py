@@ -140,6 +140,12 @@ class PoolServiceBuilder(object):
 
             if not member_exists:
                 m.create(**member)
+            else:
+                m = m.load(name=urllib.quote(member["name"]),partition=part)
+                m.update(state=None, session="user-disabled")
+                if service['member']['admin_state_up']:
+                    m.update(state="user-up", session="user-enabled")
+
 
     def delete_member(self, service, bigips):
         pool = self.service_adapter.get_pool(service)
