@@ -18,6 +18,7 @@ RUN pip install oslo.service==1.8.0
 RUN pip install git+git://github.com/openstack/neutron.git@8.1.1
 RUN pip install cffi==1.5.2
 RUN pip install git+git://github.com/openstack/neutron-lbaas.git@8.1.1
+RUN pip install git+https://github.com/F5Networks/f5-openstack-lbaasv2-driver@mitaka
 
 COPY . /app
 WORKDIR /app
