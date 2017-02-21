@@ -816,7 +816,7 @@ class iControlDriver(LBaaSBaseDriver):
     def update_member(self, old_member, member, service):
         """Update pool member"""
         LOG.debug("Updating member")
-        self._common_service_handler(service)
+        #self._common_service_handler(service)
 
     @serialized('delete_member')
     @is_connected
