@@ -66,7 +66,7 @@ class LBaaSBuilder(object):
 
         self._assure_monitors(service)
 
-        self._assure_members(service, all_subnet_hints)
+        #self._assure_members(service, all_subnet_hints)
 
         self._assure_pools_deleted(service)
 

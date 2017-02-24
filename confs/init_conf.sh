@@ -3,4 +3,4 @@
 #echo "icontrol_username = ktest" >> /app/confs/f5-openstack-agent.ini
 #echo "icontrol_password = B0n3l355" >> /app/confs/f5-openstack-agent.ini
 
-f5-oslbaasv2-agent --config-file /app/confs/f5-openstack-agent.ini --config-file /app/confs/neutron.conf --config-file /app/confs/ml2_conf.ini
+f5-oslbaasv2-agent --config-file /opt/f5-openstack-agent/confs/f5-openstack-agent.ini --config-file /opt/f5-openstack-agent/confs/neutron.conf --config-file /opt/f5-openstack-agent/confs/ml2_conf.ini
