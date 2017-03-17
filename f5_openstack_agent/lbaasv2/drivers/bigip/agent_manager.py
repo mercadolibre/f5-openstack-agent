@@ -787,7 +787,7 @@ class LbaasAgentManager(periodic_task.PeriodicTasks):  # b --> B
         except Exception as exc:
             LOG.error("delete_pool: Exception: %s" % exc.message)
 
-    #@log_helpers.log_method_call
+    @log_helpers.log_method_call
     def create_member(self, context, member, service):
         """Handle RPC cast from plugin to create_member."""
         try:
@@ -802,7 +802,7 @@ class LbaasAgentManager(periodic_task.PeriodicTasks):  # b --> B
         except Exception as exc:
             LOG.error("create_member: Exception: %s" % exc.message)
 
-    #@log_helpers.log_method_call
+    @log_helpers.log_method_call
     def update_member(self, context, old_member, member, service):
         """Handle RPC cast from plugin to update_member."""
         try:
@@ -817,7 +817,7 @@ class LbaasAgentManager(periodic_task.PeriodicTasks):  # b --> B
         except Exception as exc:
             LOG.error("update_member: Exception: %s" % exc.message)
 
-    #@log_helpers.log_method_call
+    @log_helpers.log_method_call
     def delete_member(self, context, member, service):
         """Handle RPC cast from plugin to delete_member."""
         try:

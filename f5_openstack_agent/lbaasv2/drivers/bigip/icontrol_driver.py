@@ -1362,7 +1362,7 @@ class iControlDriver(LBaaSBaseDriver):
                     self.plugin_rpc.update_health_monitor_status(
                         health_monitor['id'])
 
-    #@log_helpers.log_method_call
+    @log_helpers.log_method_call
     def _update_pool_status(self, pools):
         """Update pool status in OpenStack """
         LOG.debug("Update pool status in OpenStack ")
@@ -1383,7 +1383,7 @@ class iControlDriver(LBaaSBaseDriver):
                 elif provisioning_status == plugin_const.ERROR:
                     self.plugin_rpc.update_pool_status(pool['id'])
 
-    #@log_helpers.log_method_call
+    @log_helpers.log_method_call
     def _update_listener_status(self, service):
         """Update listener status in OpenStack """
         LOG.debug("Update listener status in OpenStack ")
