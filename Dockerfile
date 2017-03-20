@@ -15,7 +15,8 @@ RUN pip install eventlet==0.18.4
 RUN pip install oslo.config==3.9.0
 RUN pip install oslo.log==3.3.0
 RUN pip install oslo.service==1.8.0
-RUN pip install git+git://github.com/openstack/neutron.git@8.1.1
+#RUN pip install git+git://github.com/openstack/neutron.git@8.1.1
+RUN pip install git+https://github.com/openstack/neutron.git@8.1.1
 RUN pip install cffi==1.5.2
 RUN pip install git+git://github.com/openstack/neutron-lbaas.git@8.1.1
 RUN pip install git+https://github.com/F5Networks/f5-openstack-lbaasv2-driver@mitaka
